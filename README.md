@@ -1,16 +1,69 @@
-# React + Vite
+# My To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Fitur
 
-Currently, two official plugins are available:
+* **Menambahkan Tugas**: Menambahkan tugas baru ke dalam daftar dengan mudah.
+* **Mengedit Tugas**: Mengubah tugas yang sudah ada secara langsung (inline).
+* **Menghapus Tugas**: Menghapus tugas yang sudah tidak diperlukan.
+* **Menandai Status Tugas**: Menandai tugas sebagai selesai atau belum selesai.
+* **Memfilter Tugas**: Melihat semua tugas, hanya tugas aktif, atau hanya tugas yang sudah selesai.
+* **Penyimpanan Persisten**: Tugas disimpan di `localStorage` browser sehingga tetap ada meskipun halaman di-refresh atau browser ditutup.
+* **Desain Responsif**: Tampilan UI sederhana dan bersih yang dapat digunakan di berbagai ukuran layar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Teknologi yang Digunakan
 
-## React Compiler
+* **React**: Untuk membangun antarmuka pengguna.
+* **Vite**: Untuk proses development dan build yang cepat.
+* **localStorage**: Untuk menyimpan data secara lokal.
+* **CSS**: Untuk styling komponen.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Instalasi
 
-## Expanding the ESLint configuration
+1. Clone repository:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   ```bash
+   git clone <repository-url>
+   cd todo-app
+   ```
+
+2. Install dependency:
+
+   ```bash
+   pnpm install
+   ```
+
+## Penggunaan
+
+1. Jalankan server development:
+
+   ```bash
+   pnpm dev
+   ```
+
+2. Buka browser dan akses:
+
+   ```
+   http://localhost:5173
+   ```
+
+   (atau port lain yang ditampilkan di terminal)
+
+3. To Do App siap dipakai
+
+## Struktur Proyek
+
+```
+src/
+├── components/
+│   ├── FilterButtons.jsx
+│   ├── TodoInput.jsx
+│   ├── TodoItem.jsx
+│   └── TodoList.jsx
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+* **App.jsx**: Komponen utama aplikasi yang mengelola state dan melakukan render.
+* **components/**: Kumpulan komponen UI yang dapat digunakan kembali untuk aplikasi todo.
